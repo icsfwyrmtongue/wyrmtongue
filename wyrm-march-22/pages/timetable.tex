@@ -1,0 +1,79 @@
+% wanted to do some fancy macro things to make this not tedious, but it's
+% Tuesday on the week of Picocon and I am panicking.
+\newcommand{\mtr}[2]{ \multirow{#1}{*}{\parbox{0.6\textwidth}{#2}} }
+\newcommand{\tevent}[3]{
+  {#1} \textbf{#2} \par \vspace{0.1\baselineskip}{\footnotesize #3} \par
+}
+
+\begin{center}
+  \begingroup
+  \renewcommand*{\arraystretch}{2.3}
+  \begin{tabular}[t]{p{0.1\textwidth} l}
+    \hline
+    \texttt{09:15} &
+    \tevent{Front Desk / registration opens}{}{} \\ \cline{2-2}
+
+    \texttt{10:00} &
+    \mtr{2}{
+      \tevent{Guest Talk:}{Bryony Pearce}{Blackett Bulding LT1}
+    } \\
+    \texttt{10:55} & \\ \cline{2-2}
+
+    \texttt{11:00} &
+    \mtr{2}{
+      \tevent{Guest Talk:}{Matthew Wraith}{Blackett Building LT1}
+    } \\
+    \texttt{11:45} & \\ \cline{2-2}
+
+    \texttt{11:50} &
+    \mtr{2}{
+      \tevent{Guest Talk:}{Louise Mumford}{Blackett Building LT1}
+    } \\
+    \texttt{12:35} & \\ \cline{2-2}
+
+    \texttt{12:40} &
+    \mtr{2}{
+      \tevent{Guest Talk:}{Gareth Powell}{Blackett Building LT1}
+    } \\
+    \texttt{13:15} & \\ \cline{2-2}
+
+    \texttt{13:20} & 
+    \mtr{5}{
+      \tevent{}{Lunch}{Wherever you want really}
+      \vspace{1em}
+      \tevent{}{Cardboard city apocalypse and destruction of dodgy merchandise!!!}{Blackett Building LT1}
+      \vspace{1em}
+      \tevent{}{Turkey readings}{Blackett Building LT1}
+    } \\ \\ \\ \\
+    \texttt{14:55} & \\ \cline{2-2}
+
+    \texttt{15:00} &
+    \mtr{2}{
+      \tevent{Guest Talk}{AJ Flowers}{Blackett Building LT1}
+    } \\
+    \texttt{15:55} & \\ \cline{2-2}
+
+    \texttt{16:00} &
+    \mtr{2}{
+      \tevent{}{Guest Panel}{Blackett Building LT1}
+    } \\
+    \texttt{16:55} & \\ \cline{2-2}
+
+%    \texttt{15:30} & \\ \cline{2-2}
+%    \texttt{16:00} &
+%    \mtr{3}{
+%      \tevent{}{Turkey Readings \& Silly Games}{Blackett Building LT1}
+%      \vspace{1em}
+%      \tevent{}{Tabletop \& Video Games}{Blackett Building 1004}
+%    } \\
+%    \texttt{16:30} & \\
+%    \texttt{17:30} & \\ \cline{2-2}
+    
+    \texttt{17:00} &
+    \mtr{2}{
+      \tevent{}{Quiz}{Blackett Building LT1}
+    } \\
+    \texttt{18:00} & \\ \hline
+  \end{tabular}
+  \endgroup
+\end{center}

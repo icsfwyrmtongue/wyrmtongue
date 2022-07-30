@@ -1,0 +1,59 @@
+\newcommand{\profiletxt}[1]{
+  \begin{minipage}[t]{0.74\textwidth}
+    \vspace{0pt}
+    \input{#1}
+  \end{minipage}
+}
+\newcommand{\profileimg}[2]{
+  \begin{minipage}[t]{0.22\textwidth}
+    \vspace{0pt}
+    \includegraphics[width=\textwidth]{#2}
+    \\ [0.5em]
+       {\Large \altfont{#1}}
+  \end{minipage}
+}
+\newcommand{\profile}[3]{
+  \checkoddpage\ifoddpage
+  \profiletxt{#3}\hspace*{\fill}\profileimg{#1}{#2}
+  \else
+  \profileimg{#1}{#2}\hspace*{\fill}\profiletxt{#3}
+  \fi
+}
+%% \newcommand{\profile}[3]{
+%%   % #1 - name
+%%   % #2 - path to image
+%%   % #3 - path to text
+%%   \begin{minipage}[t]{0.74\textwidth}
+%%     \vspace{0pt}
+%%     \input{#3}
+%%   \end{minipage}
+%%   \hspace*{\fill}
+%%   \begin{minipage}[t]{0.22\textwidth}
+%%     \vspace{0pt}
+%%     \includegraphics[width=\textwidth]{#2}
+%%     \\ [0.5em]
+%%     {\Large \altfont{#1}}
+%%   \end{minipage}
+%% }%
+\profile{Brendan Dubois}
+        {img/guests/b-dubois.jpg}
+        {txt/guests/d-dubois}
+
+\profile{A.J. Flowers}
+        {img/guests/a-flowers.jpg}
+        {txt/guests/a-flowers}
+        
+\profile{Louise Mumford}
+        {img/guests/l-mumford.jpg}
+        {txt/guests/l-mumford}
+\profile{Bryony Pearce}
+        {img/guests/b-pearce.jpg}
+        {txt/guests/b-pearce}
+        
+\profile{Gareth Powell}
+        {img/guests/g-powell.jpeg}
+        {txt/guests/g-powell}
+        
+\profile{Matthew Wraith}
+        {img/guests/m-wraith.jpg}
+        {txt/guests/m-wraith}
