@@ -1,0 +1,82 @@
+\documentclass{wyrmtongue-oct}
+\usepackage[utf8]{inputenc}
+\usepackage{xifthen}
+\usepackage[super]{nth}
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    citecolor=black,
+    urlcolor=blue,
+    citecolor = blue,
+    anchorcolor = blue
+}
+
+\begin{document}
+\input{pages/cover}
+\clearpage
+\setcounter{page}{1}
+
+\tableofcontents
+\clearpage
+
+% \input{README}
+
+\article{editor}{From the Editor}
+{Clifford Chan}{Editor}
+\footnotetext[2]{This is not a joke. We will slap you with raw salmon.}
+\clearpage
+
+\article{chair}{Captain's Log}
+{Hazel Wright}{Chair Entity}
+\footnotetext[2]{Usually.}
+\clearpage
+
+\article{librarian}{Welcome to the Library!}
+{Hetty Symes}{Head Librarian}
+\clearpage
+
+\input{pages/book-recs}
+\clearpage
+
+\article{events}{Events Timetable}
+{Sam Shenker}{Chair of Vice\\(Events Officer)}
+\clearpage
+
+% Would the publicity officer(Michelle) need a page?
+
+% \input{pages/timetable}
+% \footnotetext[2]{Continues into the week --- drop by the library whenever
+%   and pick up a mystery book.}
+% \footnotetext[3]{Themed Fridays usually start at 18:00 in the Library.}
+% \footnotetext[4]{Extraordinary General Meeting. Run for a committee position!}
+\clearpage
+
+\article{picocon}{Picocon}
+{Juairiyah Raqib}{Picocon Sofa\footnotemark[2]}
+\footnotetext[2]{Like a chair, but comfier\texttrademark{}}
+\clearpage
+
+\input{pages/picocon-logo-reveal}
+\footnotetext[2]{Submissions will be open from start of Spring term until the end of February.}
+\clearpage
+
+% \input{pages/radio}
+% \par\vspace{\fill}
+\input{pages/getting-involved}
+\par\vspace{\fill}
+\clearpage
+
+% \input{pages/neuromancer-book-review}
+% \tombstone
+% \clearpage
+
+% \input{pages/crossword}
+% \clearpage
+
+\input{pages/back-matter}
+\clearpage
+
+\end{document}
