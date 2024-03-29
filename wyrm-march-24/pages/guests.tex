@@ -1,0 +1,85 @@
+\newcommand{\profiletxt}[1]{
+  \begin{minipage}[t]{0.74\textwidth}
+    \vspace{0pt}
+    \input{#1}
+  \end{minipage}
+}
+\newcommand{\profileimg}[2]{
+  \begin{minipage}[t]{0.22\textwidth}
+    \vspace{0pt}
+    \includegraphics[width=\textwidth]{#2}
+    \\ [0.5em]
+       {\Large \altfont{#1}}
+  \end{minipage}
+}
+\newcommand{\profile}[3]{
+  \checkoddpage\ifoddpage
+  \profiletxt{#3}\hspace*{\fill}\profileimg{#1}{#2}
+  \else
+  \profileimg{#1}{#2}\hspace*{\fill}\profiletxt{#3}
+  \fi
+}
+
+\profile{\large Christopher\\ Paolini}
+        {img/guests/christopher-paolini.jpg}
+        {txt/guests/c-paolini}
+
+\profile{Elizabeth Lim}
+        {img/guests/e-lim.png}
+        {txt/guests/e-lim}
+
+\profile{Gita\\ Ralleigh}
+        {img/guests/g-ralleigh.png}
+        {txt/guests/g-ralleigh}
+
+\profile{Jonathan Sims}
+        {img/guests/j-sims.jpg}
+        {txt/guests/j-sims}
+        
+% \checkoddpage\ifoddpage
+% \begin{minipage}[t]{0.22\textwidth}
+%     \vspace{0pt}
+%     \input{txt/guests/a-henry}
+% \end{minipage}
+% \hspace*{\fill}
+% \begin{minipage}[t]{0.22\textwidth}
+%     \vspace{0pt}
+%     \includegraphics[width=\textwidth]{img/guests/a-henry.jpg}
+%     \\ [0.5em]
+%        {\Large \altfont{Allan Henry}}
+% \end{minipage}
+
+% \profile{Mark Lawrence}
+%         {img/guests/m-lawrence.png}
+%         {txt/guests/m-lawrence}
+
+% \profiletxt{txt/guests/m-lawrence}\hspace*{\fill}\profileimg{Mark Lawrence}{img/guests/m-lawrence.png}
+
+% \profile{Tim Klotz}
+%         {img/guests/t-klotz.jpg}
+%         {txt/guests/t-klotz}
+
+% \profiletxt{txt/guests/t-klotz}\hspace*{\fill}\profileimg{Tim Klotz}{img/guests/t-klotz}
+     
+% \profile{Allan Henry}
+%         {img/guests/a-henry.jpg}
+%         {txt/guests/a-henry}
+
+% \profiletxt{txt/guests/a-henry}\hspace*{\fill}\profileimg{Allan Henry}{img/guests/a-henry}
+
+%% \newcommand{\profile}[3]{
+%%   % #1 - name
+%%   % #2 - path to image
+%%   % #3 - path to text
+%%   \begin{minipage}[t]{0.74\textwidth}
+%%     \vspace{0pt}
+%%     \input{#3}
+%%   \end{minipage}
+%%   \hspace*{\fill}
+%%   \begin{minipage}[t]{0.22\textwidth}
+%%     \vspace{0pt}
+%%     \includegraphics[width=\textwidth]{#2}
+%%     \\ [0.5em]
+%%     {\Large \altfont{#1}}
+%%   \end{minipage}
+%% }%
