@@ -1,0 +1,26 @@
+\newcommand{\socialmedia}[3]{
+  % arguments:
+  \begin{tabular}{r l}
+    \multirow{2}{*}{\LARGE {#1}}
+    & \texttt{#2} \\[-0.5em]
+    & {\footnotesize #3}
+  \end{tabular}
+}
+\begin{minipage}[t]{0.33\textwidth}
+  \vspace{-1.3em}
+  \begin{center}
+  \includegraphics[width=0.75\textwidth]{img/qr-mailing-list.png}
+  \texttt{icsf.org.uk}
+  \end{center}
+\end{minipage}
+\begin{minipage}[t]{0.4\textwidth}
+  \vspace{0em}
+  \socialmedia{\faFacebookOfficial}{\href{https://www.facebook.com/groups/ICSF.imperial}{facebook.com/groups/ICSF.imperial}}{
+    Sci-fi talk, news and events, entertaining links.}
+  \socialmedia{\faTwitter}{\href{https://twitter.com/picocon}{@picocon}}{
+    Announcements and hype for our annual convention.}
+  \socialmedia{\faTwitter}{{\href{https://twitter.com/Imperial_SciFi}{@Imperial\_SciFi}}}{
+    Our official Blue bird app account thing.}
+  \socialmedia{\faInstagram}{\href{https://www.instagram.com/imperial_scifi/?hl=en}{@imperial\_scifi}}{
+    Visions from the library.}
+\end{minipage}
