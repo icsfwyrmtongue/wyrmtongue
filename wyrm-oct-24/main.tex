@@ -1,0 +1,86 @@
+\documentclass{wyrmtongue-oct}
+\usepackage[utf8]{inputenc}
+\usepackage{xifthen}
+\usepackage[super]{nth}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{eso-pic}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue, 
+    citecolor=black,
+    urlcolor=blue,
+    citecolor = blue,
+    anchorcolor = blue
+}
+
+\begin{document}
+\input{pages/cover}
+\clearpage
+\setcounter{page}{1}
+
+\tableofcontents
+\clearpage
+
+% \input{README}
+
+\article{editor}{From the Editor}
+{Clifford Chan}{Editor}
+\footnotetext[2]{Check out the Picocon section to find out more :)}
+\clearpage
+
+\article{chair}{Captain's Log}
+{Hazel Wright}{Chair Entity}
+% \footnotetext[2]{The Chair Entity is watching you.}
+\clearpage
+
+\article{librarian}{Welcome to the Library!}
+{Kai Lam}{Head Librarian}
+% \clearpage
+\vspace{3em}
+
+\input{pages/book-recs}
+\clearpage
+
+\article{events}{Events}
+{Juairiyah Raqib}{Chair of Vice\\(Events Officer)}
+\clearpage
+
+% Would the publicity officer(Michelle) need a page?
+
+% \input{pages/timetable}
+% \footnotetext[2]{Continues into the week --- drop by the library whenever
+%   and pick up a mystery book.}
+% \footnotetext[3]{Themed Fridays usually start at 18:00 in the Library.}
+% \footnotetext[4]{Extraordinary General Meeting. Run for a committee position!}
+\clearpage
+
+\article{picocon}{Picocon}
+{Ash Robson}{Picocon Sofa}
+% \footnotetext[2]{source: me, I thought about it}
+\footnotetext[3]{Guests of Honour to be announced in the coming months, stay tuned}
+\footnotetext[4]{no guarantee your psyche will leave unharmed}
+\clearpage
+
+% \input{pages/picocon-logo-reveal}
+% \footnotetext[2]{Submissions will be open from start of Spring term until ???.}
+% \clearpage
+
+% \input{pages/radio}
+% \par\vspace{\fill}
+\input{pages/getting-involved}
+\par\vspace{\fill}
+\clearpage
+
+% \input{pages/neuromancer-book-review}
+% \tombstone
+% \clearpage
+
+% \input{pages/crossword}
+% \clearpage
+
+\input{pages/back-matter}
+\clearpage
+
+\end{document}
