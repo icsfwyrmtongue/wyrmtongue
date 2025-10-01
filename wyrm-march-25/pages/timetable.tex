@@ -1,0 +1,66 @@
+% wanted to do some fancy macro things to make this not tedious, but it's
+% Tuesday on the week of Picocon and I am panicking.
+\newcommand{\mtr}[2]{ \multirow{#1}{*}{\parbox{0.6\textwidth}{#2}} }
+\newcommand{\tevent}[3]{
+  {#1} \textbf{#2} \par \vspace{0.1\baselineskip}{\footnotesize #3} \par
+}
+
+\begin{center}
+  \begingroup
+  \renewcommand*{\arraystretch}{2.3}
+  \begin{tabular}[t]{p{0.1\textwidth} l}
+    \hline
+    \texttt{09:00} &
+    \tevent{Front Desk / registration opens}{}{} \\ \cline{2-2}
+
+    \texttt{10:00} &
+    \mtr{2}{
+      \tevent{Guest Talk:}{James Flanagan}{Blackett Bulding LT2}
+    } \\
+    \texttt{10:55} & \\ \cline{2-2}
+
+    \texttt{11:00} &
+    \mtr{2}{
+      \tevent{Guest Talk:}{qntm}{Blackett Building LT2}
+    } \\
+    \texttt{11:55} & \\ \cline{2-2}
+
+    \texttt{12:00} &
+    \mtr{2}{
+      \tevent{Guest Talk:}{Kevin Jon Davies}{Blackett Building LT2}
+    } \\
+    \texttt{12:55} & \\ \cline{2-2}
+
+    \texttt{13:00} &
+    \mtr{2}{
+      \tevent{}{LUNCH}{Nourish thy mind and body...}
+    } \\
+    \texttt{13:55} & \\ \cline{2-2}
+
+    \texttt{14:00} & 
+    \mtr{3}{
+      \tevent{}{Destruction of dodgy merchandise}{Queen's Lawn}
+      \tevent{}{Baguette Bash}{Queen's Lawn}
+    } \\ \\
+    \texttt{14:55} & \\ \cline{2-2}
+
+    \texttt{15:00} &
+        \mtr{2}{
+          \tevent{}{Guest of Honour Q\&A Panel}{Blackett Building LT2}
+        } \\
+        \texttt{15:55} & \\ \cline{2-2}
+
+    \texttt{16:00} &
+    \mtr{2}{
+      \tevent{}{Turkey Talks}{Blackett Building LT2}
+    } \\
+    \texttt{17:55} & \\ \cline{2-2}
+    
+    \texttt{18:00} &
+    \mtr{2}{
+      \tevent{}{The Picocon Quiz}{Blackett Building LT2}
+    } \\
+    \texttt{19:00} & \\ \hline
+  \end{tabular}
+  \endgroup
+\end{center}
