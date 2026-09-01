@@ -1,0 +1,119 @@
+\NeedsTeXFormat{LaTeX2e}
+
+\ProvidesClass{picocon-fanzine}[2020/02/19 for the Picocon Fanzine]
+
+%% DEPENDENCIES
+\LoadClass[a4paper,12pt]{article}
+\RequirePackage[bottom=2.5cm,left=2.2cm,right=2.2cm,top=2.2cm]{geometry}
+
+%% unicode input + symbols
+\usepackage[T1]{fontenc}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage{textcomp}
+
+%% default fonts
+\RequirePackage{tgschola}
+\renewcommand*{\ttdefault}{lmvtt}
+
+%% image imports
+\RequirePackage{graphicx}
+
+%% no indent + spacing between paragraphs
+%% (also, preserve spacing in minipages)
+% \RequirePackage{parskip}
+% \setlength{\parindent}{1.5em}
+% \newcommand{\@minipagerestore}{\setlength{\parskip}{1em}}
+\usepackage{setspace}
+\linespread{1.5}
+\usepackage[skip=14pt plus1pt]{parskip}
+
+%% TOMBSTONE - the little sci-fi symbol marking the end of an article
+\newcommand{\tombstone}{$\mathbf{\Psi\!\Phi}$}
+
+%% HORIZONTAL SEPARATOR - for stories in more than one part
+\newcommand{\hsep}{
+  \vspace{0.2\baselineskip}
+  \begin{center}\rule{0.1\textwidth}{0.4pt}\end{center}
+  \vspace{0.7\baselineskip}
+}
+
+\usepackage{titlesec}
+%% SECTION HEADER - for editorial & table of contents.
+\newcommand{\head}[1]{
+  {\Large\bf\filcenter\MakeUppercase{#1}\par}
+  \vspace{0.8em}
+  \hrule
+  \vspace{1.2em}
+}
+
+%% TABLE OF CONTENTS
+\renewcommand{\tableofcontents}{
+  \head{\contentsname}
+  \@starttoc{toc}
+}
+
+
+%% STORY - format for short story
+\newcommand{\addcontentsdesc}[1]{
+  \addtocontents{toc}{\noindent\detokenize{#1}\leavevmode\par\medskip}
+}
+\newcommand{\storyhead}[3]{
+  % this is needed for \hyperref. Otherwise the link will go to the top of the document 
+  \phantomsection
+  % add title & description to toc.
+  \addcontentsline{toc}{section}{#1}
+  \addcontentsdesc{
+    #2
+    % \vskip .5em
+    % \hspace{1em}
+    % \parbox{0.7\textwidth}{\small\itshape #3}
+  }
+  \hfill
+  \parbox{\textwidth}{
+    {\Large\filcenter\textbf{#1}\par}\vspace{0.2em}
+    \begin{center}
+        by {#2}
+    \end{center}
+  }\par\vspace{1em}
+}
+\newcommand{\story}[4]{
+  % #1 - title
+  % #2 - author
+  % #3 - hook
+  % #4 - path to text
+  \storyhead{#1}{#2}{#3}
+  \input{#4}
+  \tombstone
+}
+
+%% FULL-PAGE ART
+\newcommand{\artpage}[3]{
+  % #1 - name
+  % #2 - author
+  % #3 - path to image
+  \phantomsection
+  \addcontentsline{toc}{section}{#1 {\normalfont \textemdash{} artwork by #2}}
+  \includegraphics[width=1.05\linewidth]{#3}
+  \begin{center}
+    \textbf{#1} \textemdash{} by #2
+  \end{center}
+  \hfill 
+%  \vfill
+%  \clearpage
+}
+
+%% FULL-PAGE poem
+\newcommand{\poem}[3]{
+  % #1 - name
+  % #2 - author
+  % #3 - path to poem
+  \phantomsection
+  \addcontentsline{toc}{section}{#1 {\normalfont \textemdash{} poem by #2}}
+  \hfill
+  \parbox{0.95\textwidth}{
+    {\Large\textbf{#1}\par}\vspace{0.2em}
+    by {#2}
+  }\par\vspace{1em}
+  \input{#3}
+  \tombstone
+}
